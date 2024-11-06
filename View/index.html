@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icon CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./output.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-slate-50 p-5 flex flex-col justify-center items-center">
+    <section class="bg-white p-2 rounded shadow max-w-[700px] w-full">
+        <div>
+            <h1 class="text-xl md:text-2xl text-center uppercase text-blue-500 font-bold">Cho người dùng nhập vào các số
+                nguyên và lưu trữ trong mảng.</h1>
+        </div>
+        <div class="mt-10 text-center">
+            <label for="txtSoNguyen" class="font-semibold">Nhập vào số nguyên: </label>
+            <input type="number" id="txtSoNguyen"
+                class="bg-slate-100 hover:bg-slate-200 outline-none text-right w-20 px-1 h-7 rounded duration-300">
+            <button id="btnThem"
+                class="bg-blue-500 hover:bg-blue-600 transition duration-300 py-2 px-5 text-white rounded mt-5 md:mt-0 ml-2 sm:ml-5">Thêm
+                Số</button>
+        </div>
+        <div class="mt-5 text-center flex flex-col md:flex-row">
+            <span class="font-semibold mr-0 md:mr-5">Mảng số nguyên: </span>
+            <span id="mang"></span>
+        </div>
+    </section>
+    <section id="container" class="bg-white rounded shadow max-w-[700px] w-full mt-5 overflow-hidden">
+        <div>
+            <header class="flex justify-between items-center cursor-pointer p-2">
+                <div class="font-bold">
+                    <span class="bg-blue-300 text-white px-3 py-1 rounded text-xl">1</span>
+                    <span>Tổng các số dương trong mảng</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </header>
+            <div class="ketQua border-t-2 flex justify-between items-center overflow-hidden bg-[beige]">
+                <button
+                    class="order-2 bg-blue-500 hover:bg-blue-600 transition duration-300 py-2 px-5 text-white rounded">Tính
+                    Tổng</button>
+                <div class="order-1">
+                    <span>Tổng số dương: </span>
+                    <span class="tongSoDuong"></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <header class="flex justify-between items-center cursor-pointer p-2">
+                <div class="font-bold">
+                    <span class="bg-blue-300 text-white px-3 py-1 rounded text-xl">2</span>
+                    <span>Đếm có bao nhiêu số dương trong mảng</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </header>
+            <div class="ketQua border-t-2 flex justify-between items-center overflow-hidden bg-[beige]">
+                <button
+                    class="order-2 bg-blue-500 hover:bg-blue-600 transition duration-300 py-2 px-5 text-white rounded">Đếm
+                    Số</button>
+                <div class="order-1">
+                    <span>Số dương: </span>
+                    <span class="demSoDuong"></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <header class="flex justify-between items-center cursor-pointer p-2">
+                <div class="font-bold">
+                    <span class="bg-blue-300 text-white px-3 py-1 rounded text-xl">3</span>
+                    <span>Tìm số nhỏ nhất trong mảng</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </header>
+            <div class="ketQua border-t-2 flex justify-between items-center overflow-hidden bg-[beige]">
+                <button
+                    class="order-2 bg-blue-500 hover:bg-blue-600 transition duration-300 py-2 px-5 text-white rounded">Tìm
+                    kiếm</button>
+                <div class="order-1">
+                    <span>Số nhỏ nhất: </span>
+                    <span class="soNhoNhat"></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <header class="flex justify-between items-center cursor-pointer p-2">
+                <div class="font-bold">
+                    <span class="bg-blue-300 text-white px-3 py-1 rounded text-xl">4</span>
+                    <span>Tìm số dương nhỏ nhất trong mảng</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </header>
+            <div class="ketQua border-t-2 flex justify-between items-center overflow-hidden bg-[beige]">
+                <button
+                    class="order-2 bg-blue-500 hover:bg-blue-600 transition duration-300 py-2 px-5 text-white rounded">Tìm
+                    kiếm</button>
+                <div class="order-1">
+                    <span>Số dương nhỏ nhất: </span>
+                    <span class="soDuongNhoNhat"></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <header class="flex justify-between items-center cursor-pointer p-2">
+                <div class="font-bold">
+                    <span class="bg-blue-300 text-white px-3 py-1 rounded text-xl">5</span>
+                    <span>Tìm số chẵn cuối cùng trong mảng</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </header>
+            <div class="ketQua border-t-2 flex justify-between items-center overflow-hidden bg-[beige]">
+                <button
+                    class="order-2 bg-blue-500 hover:bg-blue-600 transition duration-300 py-2 px-5 text-white rounded">Tìm
+                    kiếm</button>
+                <div class="order-1">
+                    <span>Số chẵn cuối cùng: </span>
+                    <span class="soChanCuoiCung"></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <header class="flex justify-between items-center cursor-pointer p-2">
+                <div class="font-bold">
+                    <span class="bg-blue-300 text-white px-3 py-1 rounded text-xl">6</span>
+                    <span>Sắp xếp mảng theo thứ tự tăng dần</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </header>
+            <div class="ketQua border-t-2 flex justify-between items-center overflow-hidden bg-[beige]">
+                <button
+                    class="order-2 bg-blue-500 hover:bg-blue-600 transition duration-300 py-2 px-5 text-white rounded">Sắp
+                    xếp</button>
+                <div class="order-1">
+                    <span>Mảng sau khi sắp xếp: </span>
+                    <span class="sapXep"></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <header class="flex justify-between items-center cursor-pointer p-2">
+                <div class="font-bold">
+                    <span class="bg-blue-300 text-white px-3 py-1 rounded text-xl">7</span>
+                    <span>Tìm số nguyên tố đầu tiên trong mảng</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </header>
+            <div class="ketQua border-t-2 flex justify-between items-center overflow-hidden bg-[beige]">
+                <button
+                    class="order-2 bg-blue-500 hover:bg-blue-600 transition duration-300 py-2 px-5 text-white rounded">Tìm
+                    kiếm</button>
+                <div class="order-1">
+                    <span>Số nguyên tố đầu tiên: </span>
+                    <span class="soNguyenToDauTien"></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <header class="flex justify-between items-center cursor-pointer p-2">
+                <div class="font-bold">
+                    <span class="bg-blue-300 text-white px-3 py-1 rounded text-xl">8</span>
+                    <span>Đếm số nguyên có trong mảng</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </header>
+            <div class="ketQua border-t-2 flex justify-between items-center overflow-hidden bg-[beige]">
+                <button
+                    class="order-2 bg-blue-500 hover:bg-blue-600 transition duration-300 py-2 px-5 text-white rounded">Đếm
+                    số</button>
+                <div class="order-1">
+                    <span>Số nguyên có trong mảng: </span>
+                    <span class="soNguyenTrongMang"></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <header class="flex justify-between items-center cursor-pointer p-2">
+                <div class="font-bold">
+                    <span class="bg-blue-300 text-white px-3 py-1 rounded text-xl">9</span>
+                    <span>So sánh số lượng số âm và số dương</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </header>
+            <div class="ketQua border-t-2 flex justify-between items-center overflow-hidden bg-[beige]">
+                <button
+                    class="order-2 bg-blue-500 hover:bg-blue-600 transition duration-300 py-2 px-5 text-white rounded">So
+                    sánh</button>
+                <div class="order-1">
+                    <span>Kết quả: </span>
+                    <span class="soSanh"></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <header class="flex justify-between items-center cursor-pointer p-2">
+                <div class="font-bold">
+                    <span class="bg-blue-300 text-white px-3 py-1 rounded text-xl">10</span>
+                    <span>Đổi chỗ 2 phần tử</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </header>
+            <div class="ketQua border-t-2 overflow-hidden bg-[beige]">
+                <div class="flex justify-between items-center">
+                    <div class="space-x-2">
+                        <input id="viTri1" type="number" placeholder="Nhập vị trí 1" class="bg-slate-100 hover:bg-slate-200 outline-none text-right w-30 px-1 h-7 rounded duration-300">
+                        <input id="viTri2" type="number" placeholder="Nhập vị trí 2" class="bg-slate-100 hover:bg-slate-200 outline-none text-right w-30 px-1 h-7 rounded duration-300">    
+                    </div>
+                   <button
+                    class="order-2 bg-blue-500 hover:bg-blue-600 transition duration-300 py-2 px-5 text-white rounded">Đổi
+                    chỗ</button>
+                </div>
+                <div class="mt-3">
+                    <span>Mảng sau khi đổi: </span>
+                    <span class="doiCho"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="../Model/getData.js"></script>
+</body>
+
+</html>
